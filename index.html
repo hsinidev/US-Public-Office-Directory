@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>US Public Office Directory | Find County Clerks, Recorders & Assessors</title>
+  <meta name="description" content="Quickly find contact information for US public offices. Our comprehensive directory allows you to search and filter for County Clerks, Recorders of Deeds, and Property Assessors by state and county. A modern, user-friendly tool for civic engagement." />
+  <meta name="keywords" content="public records, county clerk, recorder of deeds, property assessor, public office, government directory, contact information, US government" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://example.com/" />
+  <meta property="og:title" content="US Public Office Directory | Find County Clerks, Recorders & Assessors" />
+  <meta property="og:description" content="A modern, searchable directory for US public offices. Find phone numbers, websites, and addresses for key government services." />
+  <meta property="og:image" content="https://picsum.photos/1200/630" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://example.com/" />
+  <meta property="twitter:title" content="US Public Office Directory | Find County Clerks, Recorders & Assessors" />
+  <meta property="twitter:description" content="A modern, searchable directory for US public offices. Find phone numbers, websites, and addresses for key government services." />
+  <meta property="twitter:image" content="https://picsum.photos/1200/630" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-color: #040815;
+      color: #fff;
+    }
+    .galaxy-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: #040815;
+      overflow: hidden;
+    }
+    .stars, .stars2, .stars3 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .stars {
+      background-image: 
+        radial-gradient(1px 1px at 20px 30px, #eee, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 40px 70px, #fff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 50px 160px, #ddd, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 90px 40px, #fff, rgba(0,0,0,0)),
+        radial-gradient(1.5px 1.5px at 150px 120px, #fff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 130px 20px, #fff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 160px 100px, #ddd, rgba(0,0,0,0));
+      background-size: 200px 200px;
+      animation: zoom 20s infinite alternate;
+    }
+    .stars2 {
+      background-image: 
+        radial-gradient(1px 1px at 10px 80px, #fff, rgba(0,0,0,0)),
+        radial-gradient(1.5px 1.5px at 60px 20px, #fff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 180px 150px, #ddd, rgba(0,0,0,0));
+      background-size: 250px 250px;
+      animation: zoom 30s infinite alternate;
+    }
+    .stars3 {
+       background-image: 
+        radial-gradient(2px 2px at 50px 50px, #fff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 100px 190px, #ddd, rgba(0,0,0,0)),
+        radial-gradient(1.5px 1.5px at 190px 90px, #fff, rgba(0,0,0,0));
+       background-size: 300px 300px;
+       animation: zoom 15s infinite alternate;
+    }
+    .nebula {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(66, 144, 226, 0.3) 0%, rgba(66, 144, 226, 0) 70%);
+      animation: rotate 60s linear infinite, drift 80s infinite alternate;
+    }
+    .nebula.two {
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(172, 74, 222, 0.25) 0%, rgba(172, 74, 222, 0) 70%);
+      animation: rotate 70s linear infinite reverse, drift 60s infinite alternate-reverse;
+      top: 20%;
+      left: 50%;
+    }
+    .nebula.three {
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(222, 74, 120, 0.15) 0%, rgba(222, 74, 120, 0) 70%);
+      animation: rotate 80s linear infinite, drift 70s infinite alternate;
+      top: 50%;
+      left: 10%;
+    }
+     .shooting-star {
+        position: absolute;
+        height: 2px;
+        background: linear-gradient(-45deg, rgba(158, 183, 255, 1), rgba(0, 0, 0, 0));
+        border-radius: 999px;
+        filter: drop-shadow(0 0 6px rgba(180, 195, 255, 0.5));
+        animation: tail 4s ease-in-out infinite, shooting 4s ease-in-out infinite;
+    }
+    @keyframes tail {
+        0% { width: 0; }
+        30% { width: 100px; }
+        100% { width: 0; }
+    }
+    @keyframes shooting {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(400px); }
+    }
+    @keyframes zoom {
+      from { transform: scale(1); }
+      to { transform: scale(1.3); }
+    }
+    @keyframes rotate {
+      from { transform: rotate(0deg) scale(1); }
+      to { transform: rotate(360deg) scale(1.1); }
+    }
+    @keyframes drift {
+      from { transform: translate(-25px, -15px); }
+      to { transform: translate(25px, 15px); }
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+</head>
+<body>
+  <div class="galaxy-bg">
+      <div class="stars"></div>
+      <div class="stars2"></div>
+      <div class="stars3"></div>
+      <div class="nebula"></div>
+      <div class="nebula two"></div>
+      <div class="nebula three"></div>
+      <div class="shooting-star" style="top: 10%; left: -50px; animation-delay: 1.2s; animation-duration: 3s;"></div>
+      <div class="shooting-star" style="top: 50%; left: -100px; animation-delay: 2.7s; animation-duration: 4s;"></div>
+      <div class="shooting-star" style="top: 80%; left: -20px; animation-delay: 0.5s; animation-duration: 3.5s;"></div>
+  </div>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
