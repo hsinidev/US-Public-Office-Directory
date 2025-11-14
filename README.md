@@ -70,7 +70,7 @@ This application is built with a modern, maintainable, and scalable tech stack.
 ├── public/
 │   └── favicon.svg               # Application icon
 ├── utils/
-│   └── SeoArticle.js             # 3500-word SEO article component with schemas
+│   └── SeoArticle.tsx            # 3500-word SEO article component with schemas
 ├── App.tsx                       # Main application component
 ├── index.html                    # Entry point with background styles and SEO tags
 ├── index.tsx                     # React app bootstrap
